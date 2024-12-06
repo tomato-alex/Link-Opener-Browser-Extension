@@ -18,4 +18,5 @@ Created because I have a lot of tabs. Also I always wondered how to create a bro
 - Support different browsers
 - Add a `.crx` file for easier installation
 - Improve the styling
+- Add support for tab groups
 
