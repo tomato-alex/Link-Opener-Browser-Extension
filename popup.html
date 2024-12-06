@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Link Opener</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title">Link Manager</h1>
+
+            <div class="section">
+                <label for="fileInput" class="custom-file-upload">
+                    <input type="file" id="fileInput" accept=".txt" />
+                    Upload Links File
+                </label>
+                <button id="openLinks" class="button import">Open Links</button>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="section">
+                <button id="exportTabs" class="button export">
+                    Export Open Tabs
+                </button>
+            </div>
+        </div>
+
+        <script src="popup.js"></script>
+    </body>
+</html>
