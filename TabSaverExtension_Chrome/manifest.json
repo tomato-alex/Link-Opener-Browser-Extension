@@ -5,9 +5,9 @@
     "description": "Load a TXT file and open all links in the current session",
     "permissions": ["tabs"],
     "action": {
-        "default_popup": "popup.html"
+        "default_popup": "../popup.html"
     },
     "background": {
-        "service_worker": "background.js"
+        "service_worker": "../background.js"
     }
 }
