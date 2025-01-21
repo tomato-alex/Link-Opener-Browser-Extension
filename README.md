@@ -50,3 +50,5 @@ Why 2 different extensions? Firefox does not currently support manifest v3 _enti
 []   Rethink the architecture to minimize duplication (build process)
 []   Create a simple build program for packaging into crx or zip and changing the manifest file
 []   tidy up the UI
+[]   Drag and drop UI
+[]   Keyboard shortcut
