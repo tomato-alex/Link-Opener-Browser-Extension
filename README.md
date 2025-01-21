@@ -1,5 +1,7 @@
 # Link Opener Browser Extension
 
+![image](https://github.com/user-attachments/assets/4f0d8dd1-a095-46d6-972b-151f50503d1a)
+
 _Work in progress_
 
 A simple extension, which exports all open tabs in the session to a `.txt` file and can open links from a `.txt` file.
@@ -32,10 +34,14 @@ Why 2 different extensions? Firefox does not currently support manifest v3 _enti
 
 ### To-dos
 
--   Dark Mode
+-   Dark Mode (Toggle + context from browser or system)
 -   Extension Icon
 -   Support different browsers
 -   Add a `.crx` file for easier installation Chromeium
--   Add a `zip` archive for easier installation on FF
+-   Add a `zip` archive for easier installation on FF and not as a temporary add-on
 -   Improve the styling
 -   Add support for tab groups
+-   CSV or JSON export (for those tab groups)
+-   Rethink the architecture to minimize duplication (build process)
+-   Create a simple build program for packaging into crx or zip and changing the manifest file
+-   tidy up the UI
