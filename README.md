@@ -40,15 +40,15 @@ Why 2 different extensions? Firefox does not currently support manifest v3 _enti
 
 ### To-dos
 
-- [ ]   Dark Mode (Toggle + context from browser or system)
-- [ ]   Extension Icon
-- [ ]   Support different browsers
-- [ ]   Add a `.crx` file for easier installation Chromeium
-- [ ]   Add a `zip` archive for easier installation on FF and not as a temporary add-on
-- [ ]   Add support for tab groups
-- [ ]   CSV or JSON export (for those tab groups)
-- [ ]   Rethink the architecture to minimize duplication (build process)
-- [ ]   Create a simple build program for packaging into crx or zip and changing the manifest file
-- [ ]   tidy up the UI
-- [ ]   Drag and drop UI
-- [ ]   Keyboard shortcut
+-   [ ] Dark Mode (Toggle + context from browser or system)
+-   [ ] Extension Icon
+-   [x] Support different browsers
+-   [ ] Add a `.crx` file for easier installation Chromeium
+-   [ ] Add a `zip` archive for easier installation on FF and not as a temporary add-on
+-   [ ] Add support for tab groups
+-   [ ] CSV or JSON export (for those tab groups)
+-   [ ] Simplify Build process to minimize code duplication (for example store version and other metadata separate from manifest version)
+-   [x] Create a simple build program for packaging into crx or zip and changing the manifest file
+-   [x] tidy up the UI
+-   [ ] Drag and drop UI
+-   [ ] Keyboard shortcut

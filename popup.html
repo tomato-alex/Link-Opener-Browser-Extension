@@ -11,20 +11,45 @@
             <h1 class="title">Link Manager</h1>
 
             <div class="section">
-                <label for="fileInput" class="custom-file-upload">
-                    <input type="file" id="fileInput" accept=".txt" />
-                    Upload Links File
-                </label>
-                <button id="openLinks" class="button import">Open Links</button>
+                <button
+                    id="exportTabsTxt"
+                    class="button export button-component"
+                >
+                    TXT Export
+                </button>
+
+                <button
+                    id="exportTabsCsv"
+                    class="button export button-component disabled"
+                >
+                    CSV Export
+                </button>
             </div>
 
             <div class="separator"></div>
 
             <div class="section">
-                <button id="exportTabs" class="button export">
-                    Export Open Tabs
+                <label
+                    for="fileInput"
+                    class="custom-file-upload button-component"
+                >
+                    <input
+                        type="file"
+                        id="fileInput"
+                        accept=".txt"
+                        class="file-input"
+                    />
+                    Upload File
+                </label>
+
+                <button
+                    id="openLinks"
+                    class="button import button-component disabled"
+                >
+                    Open Links
                 </button>
             </div>
+            <span class="file-name" id="fileName"></span>
         </div>
 
         <script src="popup.js"></script>

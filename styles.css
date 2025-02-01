@@ -35,13 +35,7 @@
   
   .custom-file-upload {
     display: inline-block;
-    margin: 1rem;
-    padding: 10px 15px;
-    cursor: pointer;
-    background-color: #3498db;
-    color: white;
-    border-radius: 5px;
-    font-size: 14px;
+    background-color: #64cce6;
   }
   
   input[type="file"] {
@@ -49,22 +43,31 @@
   }
   
   .button {
-    margin: 1rem;
-    padding: 10px 15px;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
     transition: background-color 0.3s ease;
   }
+
+  .button-component {
+    margin: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+  }
   
-  .button:hover.import {
+  .button:hover.import,
+  .label:hover.custom-file-upload,
+  .custom-file-upload:hover {
     background-color: #387dcc;
   }
 
   .button:hover.export {
     background-color: #1b7440;
+  }
+
+  .button:hover.disabled {
+    background-color: #999999;
   }
   
   .separator {
@@ -79,3 +82,8 @@
   .export {
     background-color: #2ecc71;
   }
+
+  .disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

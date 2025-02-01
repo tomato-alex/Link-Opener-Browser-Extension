@@ -26,7 +26,7 @@ document.getElementById("openLinks").addEventListener("click", function () {
 });
 
 // Function to export all open tabs to a text file
-document.getElementById("exportTabs").addEventListener("click", function () {
+document.getElementById("exportTabsTxt").addEventListener("click", function () {
     // Query all open tabs in the current window
     chrome.tabs.query({ currentWindow: true }, function (tabs) {
         const urls = tabs.map((tab) => tab.url).join("\n");
@@ -42,4 +42,20 @@ document.getElementById("exportTabs").addEventListener("click", function () {
 
         URL.revokeObjectURL(url); // Clean up after download
     });
+});
+
+// Enable/disable the "Open Links" button based on file input
+document.getElementById("fileInput").addEventListener("change", function () {
+    const fileNameDisplay = document.getElementById("fileName");
+    const openLinksButton = document.getElementById("openLinks");
+    const file = fileInput.files[0];
+    if (file) {
+        fileNameDisplay.textContent = `Loaded file: ${file.name}`;
+        openLinksButton.classList.remove("disabled");
+        openLinksButton.disabled = false;
+    } else {
+        fileNameDisplay.textContent = "";
+        openLinksButton.classList.add("disabled");
+        openLinksButton.disabled = true;
+    }
 });
