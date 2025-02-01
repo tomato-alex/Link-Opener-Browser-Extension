@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Link Manager</title>
+        <link rel="stylesheet" href="styles.css" />
+        <style>
+            /* Basic styling */
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                max-width: 600px;
+                margin: 50px auto;
+                padding: 20px;
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+            .title {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .section {
+                margin-bottom: 20px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+            .button {
+                padding: 10px 20px;
+                font-size: 16px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin: 5px;
+            }
+            .export {
+                background-color: #4caf50;
+                color: white;
+            }
+            .import {
+                background-color: #008cba;
+                color: white;
+            }
+            .separator {
+                height: 2px;
+                background-color: #e0e0e0;
+                margin: 20px 0;
+            }
+            .custom-file-upload {
+                background-color: #f0f0f0;
+                padding: 10px;
+                border: 1px solid #ccc;
+                cursor: pointer;
+                display: inline-block;
+            }
+            input[type="file"] {
+                display: none;
+            }
+            .file-name {
+                margin-top: 10px;
+                font-size: 14px;
+                color: #333;
+            }
+            .disabled {
+                background-color: #ccc;
+                cursor: not-allowed;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title">Link Manager</h1>
+
+            <div class="section">
+                <button id="exportTxt" class="button export">
+                    Export Tabs to .txt
+                </button>
+                <button id="exportCsv" class="button export">
+                    Export Tabs to .csv
+                </button>
+            </div>
+
+            <div class="separator"></div>
+
+            <div class="section">
+                <label for="fileInput" class="custom-file-upload">
+                    <input type="file" id="fileInput" accept=".txt" />
+                    Upload Links File
+                </label>
+                <span class="file-name" id="fileName"></span>
+                <button id="openLinks" class="button import disabled" disabled>
+                    Open Links
+                </button>
+            </div>
+        </div>
+
+        <script>
+            const fileInput = document.getElementById("fileInput");
+            const fileNameDisplay = document.getElementById("fileName");
+            const openLinksButton = document.getElementById("openLinks");
+
+            // Enable/disable the "Open Links" button based on file input
+            fileInput.addEventListener("change", function () {
+                const file = fileInput.files[0];
+                if (file) {
+                    fileNameDisplay.textContent = `Loaded file: ${file.name}`;
+                    openLinksButton.classList.remove("disabled");
+                    openLinksButton.disabled = false;
+                } else {
+                    fileNameDisplay.textContent = "";
+                    openLinksButton.classList.add("disabled");
+                    openLinksButton.disabled = true;
+                }
+            });
+        </script>
+    </body>
+</html>
