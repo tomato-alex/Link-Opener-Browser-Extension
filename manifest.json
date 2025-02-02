@@ -1,9 +1,9 @@
 {
-    "manifest_version": 3,
-    "name": "Link Opener from TXT",
-    "version": "1.0",
-    "description": "Load a TXT file and open all links in the current session",
+    "name": "Tab Manager",
+    "version": "1.2",
+    "description": "Import Tabs from File or Export to File",
     "permissions": ["tabs"],
+    "manifest_version": 3,
     "action": {
         "default_popup": "popup.html"
     },
