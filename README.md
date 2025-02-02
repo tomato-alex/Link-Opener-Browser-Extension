@@ -1,6 +1,7 @@
 # Link Opener Browser Extension
 
-![image](https://github.com/user-attachments/assets/4f0d8dd1-a095-46d6-972b-151f50503d1a)
+![image](https://github.com/user-attachments/assets/a9628c96-9142-4cda-aafc-8454ad1d20dd)
+
 
 _Work in progress_
 
@@ -13,6 +14,14 @@ Why not just use session restore or sync between devices or `Ctrl/Cmd + Shift + 
 ---
 
 ### How-to
+
+
+- Run the build process
+
+  ```
+    node build.js
+  ```
+  Note: NPM is not needed, as well as package.json as this runs a simple non-module script. (See Section Problems for an explanation) 
 
 -   Clone this repository
 
@@ -34,7 +43,9 @@ Why not just use session restore or sync between devices or `Ctrl/Cmd + Shift + 
 
 ### Problems
 
-Why 2 different extensions? Firefox does not currently support manifest v3 _entirely_ and as such the serviceWorker is currently disabled and the extension cannot be loaded in. There is an option to add a build script or include both extensions as separate installable packages, but as a hobby project this is a next step of maturity which doesn't make sense in the prototyping phase (considerations are being made).
+Firefox and Chrome use different manifest versions, but an extension must have a specific manifest.json file. The build script just replaces the contents of manifest.json with the specific chrome or firefox attributes.
+
+Firefox does not currently support manifest v3 _entirely_ and as such the serviceWorker is currently disabled and the extension cannot be loaded in. 
 
 ---
 
