@@ -56,7 +56,7 @@ Firefox does not currently support manifest v3 _entirely_ and as such the servic
 
 ### To-dos
 
--   [ ] Dark Mode (Toggle + context from browser or system)
+-   [x] Dark Mode (Toggle + context from browser or system)
 -   [ ] Extension Icon
 -   [x] Support different browsers
 -   [ ] Add a `.crx` file for easier installation Chromeium

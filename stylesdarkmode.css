@@ -1,10 +1,16 @@
 /* Dark mode styles */
-.dark-mode body {
-    background-color: #121212;
+body.dark-mode {
+    background-color: #1e1e1e !important;
     color: #ffffff;
 }
 
 .dark-mode .container {
-    background-color: #1e1e1e;
+    background-color: #3b3b3b;
     box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode h1,
+.dark-mode h3,
+.dark-mode #darkModeToggleLabel {
+    color: #bebebe;
 }

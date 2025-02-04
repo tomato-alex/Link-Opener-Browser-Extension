@@ -44,6 +44,7 @@ input[type="file"] {
 
 .button {
   transition: background-color 0.3s ease;
+  min-width: 70px;
 }
 
 .button-component {
