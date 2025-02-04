@@ -20,6 +20,12 @@ Why not just use session restore or sync between devices or `Ctrl/Cmd + Shift + 
       node build.js
     ```
 
+    or for Firefox
+
+    ```
+      node build.js -o firefox
+    ```
+
     Note: NPM is not needed, as well as package.json as this runs a simple non-module script. (See Section Problems for an explanation)
 
 -   Clone this repository
@@ -57,7 +63,7 @@ Firefox does not currently support manifest v3 _entirely_ and as such the servic
 -   [ ] Add a `zip` archive for easier installation on FF and not as a temporary add-on
 -   [x] Simplify Build process to minimize code duplication
 -   [x] Create a simple build program for packaging into crx or zip and changing the manifest file
--   [x] tidy up the UI
+-   [x] Tidy up the UI
 -   [ ] Drag and drop UI
 -   [ ] Keyboard shortcut
 
