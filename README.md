@@ -2,7 +2,6 @@
 
 ![image](https://github.com/user-attachments/assets/a9628c96-9142-4cda-aafc-8454ad1d20dd)
 
-
 _Work in progress_
 
 A simple extension, which exports all open tabs in the session to a `.txt` file and can open links from a `.txt` file.
@@ -15,13 +14,13 @@ Why not just use session restore or sync between devices or `Ctrl/Cmd + Shift + 
 
 ### How-to
 
+-   Run the build process
 
-- Run the build process
+    ```
+      node build.js
+    ```
 
-  ```
-    node build.js
-  ```
-  Note: NPM is not needed, as well as package.json as this runs a simple non-module script. (See Section Problems for an explanation) 
+    Note: NPM is not needed, as well as package.json as this runs a simple non-module script. (See Section Problems for an explanation)
 
 -   Clone this repository
 
@@ -45,7 +44,7 @@ Why not just use session restore or sync between devices or `Ctrl/Cmd + Shift + 
 
 Firefox and Chrome use different manifest versions, but an extension must have a specific manifest.json file. The build script just replaces the contents of manifest.json with the specific chrome or firefox attributes.
 
-Firefox does not currently support manifest v3 _entirely_ and as such the serviceWorker is currently disabled and the extension cannot be loaded in. 
+Firefox does not currently support manifest v3 _entirely_ and as such the serviceWorker is currently disabled and the extension cannot be loaded in.
 
 ---
 
@@ -56,10 +55,15 @@ Firefox does not currently support manifest v3 _entirely_ and as such the servic
 -   [x] Support different browsers
 -   [ ] Add a `.crx` file for easier installation Chromeium
 -   [ ] Add a `zip` archive for easier installation on FF and not as a temporary add-on
--   [ ] Add support for tab groups
--   [ ] CSV or JSON export (for those tab groups)
--   [ ] Simplify Build process to minimize code duplication (for example store version and other metadata separate from manifest version)
+-   [x] Simplify Build process to minimize code duplication (for example store version and other metadata separate from manifest version)
 -   [x] Create a simple build program for packaging into crx or zip and changing the manifest file
 -   [x] tidy up the UI
 -   [ ] Drag and drop UI
 -   [ ] Keyboard shortcut
+
+### Not currently possible or viable
+
+-   Add support for tab groups
+-   CSV or JSON export (for those tab groups)
+
+It only makes sense to export to those formats if support for groups is added. Currently the chrome documentation does not point towards a way to programatically create [tab groups](https://developer.chrome.com/docs/extensions/reference/api/tabGroups#method-update). Otherwise, a simple list of files is sufficient. However tab support outlines have been defined and the method to export to csv works, but is disabled. As such, also only .txt files are accepted.

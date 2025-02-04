@@ -5,29 +5,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Link Opener</title>
         <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="stylesdarkmode.css" />
     </head>
     <body>
         <div class="container">
             <h1 class="title">Link Manager</h1>
 
+            <h3>Export:</h3>
             <div class="section">
                 <button
                     id="exportTabsTxt"
                     class="button export button-component"
                 >
-                    TXT Export
+                    TXT
                 </button>
 
                 <button
                     id="exportTabsCsv"
                     class="button export button-component disabled"
                 >
-                    CSV Export
+                    CSV
+                </button>
+
+                <button
+                    id="exportTabsJson"
+                    class="button export button-component disabled"
+                >
+                    JSON
                 </button>
             </div>
 
             <div class="separator"></div>
 
+            <h3>Import:</h3>
             <div class="section">
                 <label
                     for="fileInput"
@@ -38,7 +48,7 @@
                         id="fileInput"
                         accept=".txt"
                         class="file-input"
-                    />
+                    /><!--accept=".txt, .csv, .json"-->
                     Upload File
                 </label>
 
@@ -50,6 +60,15 @@
                 </button>
             </div>
             <span class="file-name" id="fileName"></span>
+
+            <div class="separator"></div>
+
+            <div class="section">
+                <label for="darkModeToggle">
+                    <input type="checkbox" id="darkModeToggle" />
+                    Dark Mode
+                </label>
+            </div>
         </div>
 
         <script src="popup.js"></script>

@@ -2,7 +2,7 @@
     "name": "Tab Manager",
     "version": "1.2",
     "description": "Import Tabs from File or Export to File",
-    "permissions": ["tabs"],
+    "permissions": ["tabs", "tabGroups"],
     "manifest_version": 3,
     "action": {
         "default_popup": "popup.html"
