@@ -55,7 +55,7 @@ Firefox does not currently support manifest v3 _entirely_ and as such the servic
 -   [x] Support different browsers
 -   [ ] Add a `.crx` file for easier installation Chromeium
 -   [ ] Add a `zip` archive for easier installation on FF and not as a temporary add-on
--   [x] Simplify Build process to minimize code duplication (for example store version and other metadata separate from manifest version)
+-   [x] Simplify Build process to minimize code duplication
 -   [x] Create a simple build program for packaging into crx or zip and changing the manifest file
 -   [x] tidy up the UI
 -   [ ] Drag and drop UI
