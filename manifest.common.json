@@ -2,5 +2,10 @@
     "name": "Tab Manager",
     "version": "1.3",
     "description": "Import Tabs from File or Export to File",
-    "permissions": ["tabs", "tabGroups"]
+    "permissions": ["tabs", "tabGroups"],
+    "icons": {
+        "16": "icons/icon.png",
+        "48": "icons/icon.png",
+        "128": "icons/icon.png"
+    }
 }
