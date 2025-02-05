@@ -14,6 +14,8 @@ Why not just use session restore or sync between devices or `Ctrl/Cmd + Shift + 
 
 ### How-to
 
+-   Clone this repository
+
 -   Run the build process
 
     ```
@@ -28,7 +30,7 @@ Why not just use session restore or sync between devices or `Ctrl/Cmd + Shift + 
 
     Note: NPM is not needed, as well as package.json as this runs a simple non-module script. (See Section Problems for an explanation)
 
--   Clone this repository
+- Importing the extension
 
     -   Chrome
 
