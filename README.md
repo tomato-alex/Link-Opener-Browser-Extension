@@ -1,6 +1,8 @@
 # Link Opener Browser Extension
 
-![image](https://github.com/user-attachments/assets/a9628c96-9142-4cda-aafc-8454ad1d20dd)
+![image](https://github.com/user-attachments/assets/b375a818-368e-498f-ba99-0c8727dc6fb3) | ![image](https://github.com/user-attachments/assets/b591500b-4569-4615-91e7-760a16d63497)
+
+
 
 _Work in progress_
 
