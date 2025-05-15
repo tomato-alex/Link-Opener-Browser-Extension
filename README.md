@@ -1,4 +1,6 @@
-# Link Opener Browser Extension
+# Lobster
+
+## Link Opener - Browser Save Tab Extension Revisited
 
 ![image](https://github.com/user-attachments/assets/b375a818-368e-498f-ba99-0c8727dc6fb3) | ![image](https://github.com/user-attachments/assets/b591500b-4569-4615-91e7-760a16d63497)
 
