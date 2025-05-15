@@ -63,10 +63,13 @@ Firefox does not currently support manifest v3 _entirely_ and as such the servic
 ### To-dos
 
 -   [x] Dark Mode (Toggle + context from browser or system)
--   [x] Extension Icon
+-   [ ] New Extension Icon
 -   [x] Support different browsers
+-   [ ] Add `.json` support to support groups
+-   [ ] (Optional) Rename build.js to lobster.js or idk
 -   [ ] Add a `.crx` file for easier installation Chromeium
 -   [ ] Add a `zip` archive for easier installation on FF and not as a temporary add-on
+-   [ ] Change the popup.js to differentiate between chrome and browser api (FF uses browser, chrome uses chrome)
 -   [x] Simplify Build process to minimize code duplication
 -   [x] Create a simple build program for packaging into crx or zip and changing the manifest file
 -   [x] Tidy up the UI
@@ -75,7 +78,7 @@ Firefox does not currently support manifest v3 _entirely_ and as such the servic
 
 ### Not currently possible or viable
 
--   Add support for tab groups
--   CSV or JSON export (for those tab groups)
+-   ~~Add support for tab groups~~ As of the new FF update should be possible
+-   ~~CSV or JSON export (for those tab groups)~~
 
 It only makes sense to export to those formats if support for groups is added. Currently the chrome documentation does not point towards a way to programatically create [tab groups](https://developer.chrome.com/docs/extensions/reference/api/tabGroups#method-update). Otherwise, a simple list of files is sufficient. However tab support outlines have been defined and the method to export to csv works, but is disabled. As such, also only .txt files are accepted.
