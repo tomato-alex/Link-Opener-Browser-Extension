@@ -1,23 +1,26 @@
 {
-    "name": "Tab Manager",
-    "version": "1.3",
-    "description": "Import Tabs from File or Export to File",
-    "permissions": ["tabs", "tabGroups"],
-    "icons": {
-        "16": "icons/icon.png",
-        "48": "icons/icon.png",
-        "128": "icons/icon.png"
-    },
-    "manifest_version": 3,
-    "action": {
-        "default_popup": "popup.html",
-        "default_icon": {
-            "16": "icons/icon.png",
-            "48": "icons/icon.png",
-            "128": "icons/icon.png"
-        }
-    },
-    "background": {
-        "service_worker": "background.js"
+  "name": "Lobster",
+  "version": "1.4",
+  "description": "Import Tabs from File or Export to File",
+  "permissions": [
+    "tabs",
+    "tabGroups"
+  ],
+  "icons": {
+    "16": "icons/lobster_icon.png",
+    "48": "icons/lobster_icon.png",
+    "128": "icons/lobster_icon.png"
+  },
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon.png",
+      "48": "icons/icon.png",
+      "128": "icons/icon.png"
     }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
 }

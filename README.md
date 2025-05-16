@@ -4,8 +4,6 @@
 
 ![image](https://github.com/user-attachments/assets/b375a818-368e-498f-ba99-0c8727dc6fb3) | ![image](https://github.com/user-attachments/assets/b591500b-4569-4615-91e7-760a16d63497)
 
-
-
 _Work in progress_
 
 A simple extension, which exports all open tabs in the session to a `.txt` file and can open links from a `.txt` file.
@@ -34,7 +32,7 @@ Why not just use session restore or sync between devices or `Ctrl/Cmd + Shift + 
 
     Note: NPM is not needed, as well as package.json as this runs a simple non-module script. (See Section Problems for an explanation)
 
-- Importing the extension
+-   Importing the extension
 
     -   Chrome
 
@@ -63,9 +61,9 @@ Firefox does not currently support manifest v3 _entirely_ and as such the servic
 ### To-dos
 
 -   [x] Dark Mode (Toggle + context from browser or system)
--   [ ] New Extension Icon
+-   [x] New Extension Icon
 -   [x] Support different browsers
--   [ ] Add `.json` support to support groups
+-   [x] Add `.json` support to support groups
 -   [ ] (Optional) Rename build.js to lobster.js or idk
 -   [ ] Add a `.crx` file for easier installation Chromeium
 -   [ ] Add a `zip` archive for easier installation on FF and not as a temporary add-on
