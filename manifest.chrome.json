@@ -1,5 +1,6 @@
 {
     "manifest_version": 3,
+    "permissions": ["tabs", "tabGroups", "activeTab"],
     "action": {
         "default_popup": "popup.html",
         "default_icon": {

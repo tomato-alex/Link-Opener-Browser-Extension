@@ -118,7 +118,6 @@ function openJsonFile(fileInput) {
                             await chrome.tabGroups.update(groupId, {
                                 title: item.title,
                                 color: item.color,
-                                collapsed: item.collapsed,
                             });
                         }
                     );
@@ -212,8 +211,6 @@ document
 
         for (const tab of tabs) {
             const tabGroupId = tab.groupId;
-            let groupTitle = "";
-            let groupColor = "";
 
             let tabRecord = {
                 id: tab.id,
@@ -222,6 +219,8 @@ document
                 active: tab.active,
                 pinned: tab.pinned,
             };
+
+            console.log("tabGroupId", tabGroupId);
 
             if (tabGroupId !== -1) {
                 const group = await getGroupInfo(tabGroupId);
@@ -236,7 +235,6 @@ document
                         id: tabGroupId,
                         title: group.title,
                         color: group.color,
-                        collapsed: group.collapsed,
                         tabs: [],
                     };
                     tabDetails.push(groupEntry);

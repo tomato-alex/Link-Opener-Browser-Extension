@@ -7,6 +7,7 @@
 _Work in progress_
 
 A simple extension, which exports all open tabs in the session to a `.txt` file and can open links from a `.txt` file.
+Also can export and import (Chrome only currently) tab groups with their respective tabs via a `.json` export/import.
 
 Created because I have a lot of tabs. Also I always wondered how to create a browser extension and now I know.
 
@@ -52,9 +53,13 @@ Why not just use session restore or sync between devices or `Ctrl/Cmd + Shift + 
 
 ### Problems
 
-Firefox and Chrome use different manifest versions, but an extension must have a specific manifest.json file. The build script just replaces the contents of manifest.json with the specific chrome or firefox attributes.
+-   Firefox and Chrome use different manifest versions, but an extension must have a specific manifest.json file. The build script just replaces the contents of manifest.json with the specific chrome or firefox attributes.
 
-Firefox does not currently support manifest v3 _entirely_ and as such the serviceWorker is currently disabled and the extension cannot be loaded in.
+-   Firefox does not currently support manifest v3 _entirely_ and as such the serviceWorker is currently disabled and the extension cannot be loaded in.
+
+-   Currently the process for Firefox isn't working due to:
+    1. Missing support for tabGroup in the Firefox API (coming in API 139)
+    2. For some reason when the context window to select an import file is open, the extension closes. The process needs to be moved to background.js. Analysis required to see how this might impact chrome
 
 ---
 
@@ -76,7 +81,6 @@ Firefox does not currently support manifest v3 _entirely_ and as such the servic
 
 ### Not currently possible or viable
 
--   ~~Add support for tab groups~~ As of the new FF update should be possible
--   ~~CSV or JSON export (for those tab groups)~~
+-   CSV export (to be researched)
 
 It only makes sense to export to those formats if support for groups is added. Currently the chrome documentation does not point towards a way to programatically create [tab groups](https://developer.chrome.com/docs/extensions/reference/api/tabGroups#method-update). Otherwise, a simple list of files is sufficient. However tab support outlines have been defined and the method to export to csv works, but is disabled. As such, also only .txt files are accepted.
