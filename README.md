@@ -49,7 +49,7 @@ This extension shines in scenarios like:
 
 ```bash
 git clone https://github.com/tomato-alex/lobster.git
-cd lobster
+cd lobster/src
 ```
 
 ### 2. Run the build script
@@ -68,7 +68,7 @@ node build.js -o firefox # For Firefox
 1. Go to `chrome://extensions/`
 2. Enable **Developer mode** (top-right)
 3. Click **Load unpacked**
-4. Select the extension folder
+4. Select the source folder
 
 > ℹ️ Although the `.crx` file exists, chrome does not allow extensions from outside the webstore to be installed.
 
@@ -76,7 +76,7 @@ node build.js -o firefox # For Firefox
 
 1. Go to `about:debugging#/runtime/this-firefox`
 2. Click **Load Temporary Add-on...**
-3. Select the \`manifest.json\` from the working directory (extension folder)
+3. Select the `manifest.json` from the working directory (source folder)
 
 > ℹ️ Although a process exists for more permanent extension installation files, I will wait for API Group support in firefox.
 
