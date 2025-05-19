@@ -45,32 +45,32 @@ This extension shines in scenarios like:
 
 ### 1. Clone the repository
 
-\`\`\`bash
+```bash
 git clone https://github.com/tomato-alex/lobster.git
 cd lobster
-\`\`\`
+```
 
 ### 2. Run the build script
 
-\`\`\`bash
+```bash
 node build.js # For Chrome (default)
 node build.js -o firefox # For Firefox
-\`\`\`
+```
 
-> ℹ️ No NPM install or \`package.json\` needed. This is a simple build script that swaps the manifest file based on the target browser.
+> ℹ️ No NPM install or `package.json` needed. This is a simple build script that swaps the manifest file based on the target browser.
 
 ### 3. Load the extension
 
 #### 🕶 Chrome
 
-1. Go to \`chrome://extensions/\`
+1. Go to `chrome://extensions/`
 2. Enable **Developer mode** (top-right)
 3. Click **Load unpacked**
 4. Select the extension folder
 
 #### 🦊 Firefox
 
-1. Go to \`about:debugging#/runtime/this-firefox\`
+1. Go to `about:debugging#/runtime/this-firefox`
 2. Click **Load Temporary Add-on...**
 3. Select the \`manifest.json\` from the working directory (extension folder)
 
@@ -81,8 +81,8 @@ node build.js -o firefox # For Firefox
 -   Firefox:
     -   No tab group support yet (coming in API 139)
     -   File picker causes popup to close – move logic to background script
-    -   Incomplete support for Manifest V3 and \`serviceWorker\`
--   Manifest differences between Chrome and Firefox require dynamic replacement (\`build.js\` handles this)
+    -   Incomplete support for Manifest V3 and `serviceWorker`
+-   Manifest differences between Chrome and Firefox require dynamic replacement (`build.js` handles this)
 
 ---
 
@@ -93,25 +93,25 @@ node build.js -o firefox # For Firefox
 -   [x] Dark Mode toggle
 -   [x] New extension icon
 -   [x] Support Chrome and Firefox
--   [x] Export/import tab groups (\`.json\`)
+-   [x] Export/import tab groups (`.json`)
 -   [x] Simplify build script
 -   [x] Clean up UI
 -   [ ] Drag & Drop support
 -   [ ] Keyboard shortcuts
--   [ ] Distinguish between \`chrome\` and \`browser\` APIs in code (this might not be needed)
--   [ ] Rename \`build.js\` to something more fun (\`lobster.js\`?)
+-   [ ] Distinguish between `chrome` and `browser` APIs in code (this might not be needed)
+-   [ ] Rename \`build.js\` to something more fun (`lobster.js`?)
 
 ### 📦 Packaging
 
--   [ ] Create \`.crx\` file for easier Chrome installation
--   [ ] Create \`.zip\` for simpler Firefox install
+-   [ ] Create `.crx` file for easier Chrome installation
+-   [ ] Create `.zip` for simpler Firefox install
 
 ---
 
 ## 🧪 Not Yet Possible (Or Practical)
 
 -   **CSV Export:**  
-    Technically feasible, but currently disabled. Exporting tab groups in a structured way makes more sense with \`.json\` for now. If future API changes allow stable group operations across browsers, CSV might be reintroduced.
+    Technically feasible, but currently disabled. Exporting tab groups in a structured way makes more sense with `.json` for now. If future API changes allow stable group operations across browsers, CSV might be reintroduced.
 
 ---
 
