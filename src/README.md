@@ -70,11 +70,15 @@ node build.js -o firefox # For Firefox
 3. Click **Load unpacked**
 4. Select the extension folder
 
+> ℹ️ Although the `.crx` file exists, chrome does not allow extensions from outside the webstore to be installed.
+
 #### 🦊 Firefox
 
 1. Go to `about:debugging#/runtime/this-firefox`
 2. Click **Load Temporary Add-on...**
 3. Select the \`manifest.json\` from the working directory (extension folder)
+
+> ℹ️ Although a process exists for more permanent extension installation files, I will wait for API Group support in firefox.
 
 ---
 
@@ -100,13 +104,14 @@ node build.js -o firefox # For Firefox
 -   [x] Clean up UI
 -   [ ] Drag & Drop support
 -   [ ] Keyboard shortcuts
--   [ ] Distinguish between `chrome` and `browser` APIs in code (this might not be needed)
--   [ ] Rename \`build.js\` to something more fun (`lobster.js`?)
+-   [ ] Distinguish between `chrome` and `browser` APIs in code (optional, as FF handles this)
+-   [ ] Rename `build.js` to something more fun (`lobster.js`?)
 
 ### 📦 Packaging
 
 -   [ ] Create `.crx` file for easier Chrome installation
 -   [ ] Create `.zip` for simpler Firefox install
+-   [ ] Automate installation files (Chrome and Firefox packaging)
 
 ---
 
