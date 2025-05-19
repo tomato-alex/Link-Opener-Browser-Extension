@@ -2,7 +2,7 @@
 
 ## Link Opener - A Simple Tab Session Saver and Restorer
 
-or simply **L**obster **O**pener **B**rowser **S**ave **T**ab **E**xtension **R**evisited
+or simply ***L***obster ***O***pener ***B***rowser ***S***ave ***T***ab ***E***xtension ***R***evisited
 
 ![Screenshot 1](https://github.com/user-attachments/assets/b375a818-368e-498f-ba99-0c8727dc6fb3) | ![Screenshot 2](https://github.com/user-attachments/assets/b591500b-4569-4615-91e7-760a16d63497)
 
@@ -106,6 +106,8 @@ node build.js -o firefox # For Firefox
 -   [ ] Keyboard shortcuts
 -   [ ] Distinguish between `chrome` and `browser` APIs in code (optional, as FF handles this)
 -   [ ] Rename `build.js` to something more fun (`lobster.js`?)
+-   [ ] All Tab export (from all windows)
+-   [ ] Select tabs or groups to be exported
 
 ### 📦 Packaging
 
