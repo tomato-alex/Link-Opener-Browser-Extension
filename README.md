@@ -2,6 +2,8 @@
 
 ## Link Opener - A Simple Tab Session Saver and Restorer
 
+or simply **L**obster **O**pener **B**rowser **S**ave **T**ab **E**xtension **R**evisited
+
 ![Screenshot 1](https://github.com/user-attachments/assets/b375a818-368e-498f-ba99-0c8727dc6fb3) | ![Screenshot 2](https://github.com/user-attachments/assets/b591500b-4569-4615-91e7-760a16d63497)
 
 > _A simple, privacy-friendly tool to save and reopen browser sessions – with tab groups support on Chrome._
@@ -20,7 +22,7 @@ Created because I have way too many tabs, wanted more control over sessions, and
 
 ---
 
-## 🖥️ Why Not Use Built-In Sync?
+## 🖥️ Why Not Use Built-In Sync Options?
 
 This extension shines in scenarios like:
 

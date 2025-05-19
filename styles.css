@@ -35,7 +35,7 @@ body {
 
 .custom-file-upload {
   display: inline-block;
-  background-color: #64cce6;
+  background-color: #F76C5E;
 }
 
 input[type="file"] {
@@ -60,11 +60,11 @@ input[type="file"] {
 .button:hover.import,
 .label:hover.custom-file-upload,
 .custom-file-upload:hover {
-  background-color: #387dcc;
+  background-color: #f58a81;
 }
 
 .button:hover.export {
-  background-color: #1b7440;
+  background-color: #e66060;
 }
 
 
@@ -75,11 +75,11 @@ input[type="file"] {
 }
 
 .import {
-  background-color: #90daec;
+  background-color: #F76C5E;
 }
 
 .export {
-  background-color: #2ecc71;
+  background-color: #F08080		;
 }
 
 .disabled {
