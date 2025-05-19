@@ -1,86 +1,121 @@
-# Lobster
+# 🦞 Lobster
 
-## Link Opener - Browser Save Tab Extension Revisited
+## Link Opener - A Simple Tab Session Saver and Restorer
 
-![image](https://github.com/user-attachments/assets/b375a818-368e-498f-ba99-0c8727dc6fb3) | ![image](https://github.com/user-attachments/assets/b591500b-4569-4615-91e7-760a16d63497)
+![Screenshot 1](https://github.com/user-attachments/assets/b375a818-368e-498f-ba99-0c8727dc6fb3) | ![Screenshot 2](https://github.com/user-attachments/assets/b591500b-4569-4615-91e7-760a16d63497)
 
-_Work in progress_
-
-A simple extension, which exports all open tabs in the session to a `.txt` file and can open links from a `.txt` file.
-Also can export and import (Chrome only currently) tab groups with their respective tabs via a `.json` export/import.
-
-Created because I have a lot of tabs. Also I always wondered how to create a browser extension and now I know.
-
-Why not just use session restore or sync between devices or `Ctrl/Cmd + Shift + t`? There might be different use cases like privacy oriented browsers, incognito mode, sync between devices without the need of authentification, backups, opening predefined set of tabs or similar.
+> _A simple, privacy-friendly tool to save and reopen browser sessions – with tab groups support on Chrome._
 
 ---
 
-### How-to
+### ✅ Features
 
--   Clone this repository
+-   Export all open tabs to a `.txt` file
+-   Open links from a `.txt` file
+-   Export and import **tab groups** (Chrome only) via `.json`
+-   Dark mode toggle + system/browser preference
+-   Minimal, distraction-free UI
 
--   Run the build process
-
-    ```
-      node build.js
-    ```
-
-    or for Firefox
-
-    ```
-      node build.js -o firefox
-    ```
-
-    Note: NPM is not needed, as well as package.json as this runs a simple non-module script. (See Section Problems for an explanation)
-
--   Importing the extension
-
-    -   Chrome
-
-        1.  Open `chrome://extensions/`
-        1.  Enable `Developer mode` (top right)
-        1.  Click `Load Unpacked`
-        1.  Select the Chrome folder
-
-    -   Firefox
-        1.  Open `about:debugging#/runtime/this-firefox`
-        1.  Click `Load Temporary Add-on...`
-        1.  Select the `manifest.json` file from the Firefox folder
-
--   Voilà, you can now use it
+Created because I have way too many tabs, wanted more control over sessions, and always wanted to build a browser extension.
 
 ---
 
-### Problems
+## 🖥️ Why Not Use Built-In Sync?
 
--   Firefox and Chrome use different manifest versions, but an extension must have a specific manifest.json file. The build script just replaces the contents of manifest.json with the specific chrome or firefox attributes.
+This extension shines in scenarios like:
 
--   Firefox does not currently support manifest v3 _entirely_ and as such the serviceWorker is currently disabled and the extension cannot be loaded in.
-
--   Currently the process for Firefox isn't working due to:
-    1. Missing support for tabGroup in the Firefox API (coming in API 139)
-    2. For some reason when the context window to select an import file is open, the extension closes. The process needs to be moved to background.js. Analysis required to see how this might impact chrome
+-   Using **incognito** or privacy-focused browsers
+-   Working across devices **without login/sync**
+-   Wanting to **save specific tab groups** as named presets
+-   Creating **backups** of your browsing sessions
+-   Avoiding reliance on `Ctrl/Cmd + Shift + T` or browser restore
 
 ---
 
-### To-dos
+## 🚧 Current Status
 
--   [x] Dark Mode (Toggle + context from browser or system)
--   [x] New Extension Icon
--   [x] Support different browsers
--   [x] Add `.json` support to support groups
--   [ ] (Optional) Rename build.js to lobster.js or idk
--   [ ] Add a `.crx` file for easier installation Chromeium
--   [ ] Add a `zip` archive for easier installation on FF and not as a temporary add-on
--   [ ] Change the popup.js to differentiate between chrome and browser api (FF uses browser, chrome uses chrome)
--   [x] Simplify Build process to minimize code duplication
--   [x] Create a simple build program for packaging into crx or zip and changing the manifest file
--   [x] Tidy up the UI
--   [ ] Drag and drop UI
--   [ ] Keyboard shortcut
+-   ✅ **Chrome:** Fully functional
+-   🕓 **Firefox:** Pending support for [API 139 Tab Groups](https://bugzilla.mozilla.org/show_bug.cgi?id=1857200)
+    -   Supports `.txt` export and import
+    -   Workaround in place for import window issues and manifest v3 limitations, utilizing manifest v2 build process.
 
-### Not currently possible or viable
+---
 
--   CSV export (to be researched)
+## ⚙️ Installation
 
-It only makes sense to export to those formats if support for groups is added. Currently the chrome documentation does not point towards a way to programatically create [tab groups](https://developer.chrome.com/docs/extensions/reference/api/tabGroups#method-update). Otherwise, a simple list of files is sufficient. However tab support outlines have been defined and the method to export to csv works, but is disabled. As such, also only .txt files are accepted.
+### 1. Clone the repository
+
+\`\`\`bash
+git clone https://github.com/tomato-alex/lobster.git
+cd lobster
+\`\`\`
+
+### 2. Run the build script
+
+\`\`\`bash
+node build.js # For Chrome (default)
+node build.js -o firefox # For Firefox
+\`\`\`
+
+> ℹ️ No NPM install or \`package.json\` needed. This is a simple build script that swaps the manifest file based on the target browser.
+
+### 3. Load the extension
+
+#### 🕶 Chrome
+
+1. Go to \`chrome://extensions/\`
+2. Enable **Developer mode** (top-right)
+3. Click **Load unpacked**
+4. Select the extension folder
+
+#### 🦊 Firefox
+
+1. Go to \`about:debugging#/runtime/this-firefox\`
+2. Click **Load Temporary Add-on...**
+3. Select the \`manifest.json\` from the working directory (extension folder)
+
+---
+
+## 🛠️ Known Issues and Shortcomings
+
+-   Firefox:
+    -   No tab group support yet (coming in API 139)
+    -   File picker causes popup to close – move logic to background script
+    -   Incomplete support for Manifest V3 and \`serviceWorker\`
+-   Manifest differences between Chrome and Firefox require dynamic replacement (\`build.js\` handles this)
+
+---
+
+## 📋 To-Do
+
+### 🌍 Core Functionality
+
+-   [x] Dark Mode toggle
+-   [x] New extension icon
+-   [x] Support Chrome and Firefox
+-   [x] Export/import tab groups (\`.json\`)
+-   [x] Simplify build script
+-   [x] Clean up UI
+-   [ ] Drag & Drop support
+-   [ ] Keyboard shortcuts
+-   [ ] Distinguish between \`chrome\` and \`browser\` APIs in code (this might not be needed)
+-   [ ] Rename \`build.js\` to something more fun (\`lobster.js\`?)
+
+### 📦 Packaging
+
+-   [ ] Create \`.crx\` file for easier Chrome installation
+-   [ ] Create \`.zip\` for simpler Firefox install
+
+---
+
+## 🧪 Not Yet Possible (Or Practical)
+
+-   **CSV Export:**  
+    Technically feasible, but currently disabled. Exporting tab groups in a structured way makes more sense with \`.json\` for now. If future API changes allow stable group operations across browsers, CSV might be reintroduced.
+
+---
+
+## About
+
+Built for fun, function, and out of a bit of tab-hoarding desperation.
+Feel free to fork, improve, or contribute!
