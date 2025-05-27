@@ -14,7 +14,7 @@ or simply **L**obster **O**pener **B**rowser **S**ave **T**ab **E**xtension **R*
 
 -   Export all open tabs to a `.txt` file
 -   Open links from a `.txt` file
--   Export and import **tab groups** (Chrome only) via `.json`
+-   Export and import **tab groups** via `.json`
 -   Dark mode toggle + system/browser preference
 -   Minimal, distraction-free UI
 
@@ -37,9 +37,8 @@ This extension shines in scenarios like:
 ## 🚧 Current Status
 
 -   ✅ **Chrome:** Fully functional
--   🕓 **Firefox:** Pending support for [API 139 Tab Groups](https://bugzilla.mozilla.org/show_bug.cgi?id=1857200)
-    -   Supports `.txt` export and import
-    -   Workaround in place for import window issues and manifest v3 limitations, utilizing manifest v2 build process.
+-   ✅ **Firefox:** Fully functional
+    -   Workaround in place due to manifest v3 limitations, utilizing manifest v2 build process for FF.
 
 ---
 
@@ -56,7 +55,7 @@ cd lobster/src
 
 ```bash
 node build.js # For Chrome (default)
-node build.js -o firefox # For Firefox
+node build.js firefox # For Firefox
 ```
 
 > ℹ️ No NPM install or `package.json` needed. This is a simple build script that swaps the manifest file based on the target browser.
@@ -76,7 +75,7 @@ node build.js -o firefox # For Firefox
 
 1. Go to `about:debugging#/runtime/this-firefox`
 2. Click **Load Temporary Add-on...**
-3. Select the `manifest.json` from the working directory (source folder)
+3. Select the `manifest.json` from the source folder
 
 > ℹ️ Although a process exists for more permanent extension installation files, I will wait for API Group support in firefox.
 
@@ -85,7 +84,6 @@ node build.js -o firefox # For Firefox
 ## 🛠️ Known Issues and Shortcomings
 
 -   Firefox:
-    -   No tab group support yet (coming in API 139)
     -   File picker causes popup to close – move logic to background script
     -   Incomplete support for Manifest V3 and `serviceWorker`
 -   Manifest differences between Chrome and Firefox require dynamic replacement (`build.js` handles this)
@@ -104,8 +102,12 @@ node build.js -o firefox # For Firefox
 -   [x] Clean up UI
 -   [ ] Drag & Drop support
 -   [ ] Keyboard shortcuts
--   [ ] Distinguish between `chrome` and `browser` APIs in code (optional, as FF handles this)
--   [ ] Rename `build.js` to something more fun (`lobster.js`?)
+-   [ ] Fix Firefox extension closing when file selection open
+-   [ ] ~~Distinguish between `chrome` and `browser` APIs in code (optional, as FF handles this)~~
+-   [ ] Rename `build.js` (`lobster.js`?)
+
+-   [ ] v1.6 Tab Overview similar to Chrome or Firefox to allow selection of tabs or groups for partial export
+-   [ ] v2 Tab Manager for managing tabs (move tabs, etc)
 
 ### 📦 Packaging
 
