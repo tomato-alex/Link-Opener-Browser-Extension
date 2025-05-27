@@ -2,7 +2,7 @@
 
 ## Link Opener - A Simple Tab Session Saver and Restorer
 
-or simply **_L_**obster **_O_**pener **_B_**rowser **_S_**ave **_T_**ab **_E_**xtension **_R_**evisited
+or simply **_Lobster_** (**L**obster **O**pener **B**rowser **S**ave **T**ab **E**xtension **R**evisited)
 
 ![Screenshot 1](https://github.com/user-attachments/assets/b375a818-368e-498f-ba99-0c8727dc6fb3) | ![Screenshot 2](https://github.com/user-attachments/assets/b591500b-4569-4615-91e7-760a16d63497)
 
@@ -15,8 +15,8 @@ or simply **_L_**obster **_O_**pener **_B_**rowser **_S_**ave **_T_**ab **_E_**x
 -   Export all open tabs to a `.txt` file
 -   Open links from a `.txt` file
 -   Export and import **tab groups** via `.json`
--   Dark mode toggle + system/browser preference
--   Minimal, distraction-free UI
+-   Dark mode toggle
+-   Minimal UI
 
 Created because I have way too many tabs, wanted more control over sessions, and always wanted to build a browser extension.
 
@@ -127,4 +127,3 @@ node build.js firefox # For Firefox
 ## About
 
 Built for fun, function, and out of a bit of tab-hoarding desperation.
-Feel free to fork, improve, or contribute!
