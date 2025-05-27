@@ -2,7 +2,7 @@
 
 ## Link Opener - A Simple Tab Session Saver and Restorer
 
-or simply **L**obster **O**pener **B**rowser **S**ave **T**ab **E**xtension **R**evisited
+or simply **_L_**obster **_O_**pener **_B_**rowser **_S_**ave **_T_**ab **_E_**xtension **_R_**evisited
 
 ![Screenshot 1](https://github.com/user-attachments/assets/b375a818-368e-498f-ba99-0c8727dc6fb3) | ![Screenshot 2](https://github.com/user-attachments/assets/b591500b-4569-4615-91e7-760a16d63497)
 
