@@ -3,63 +3,48 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Link Opener</title>
+        <title>Link Manager Options & Import</title>
         <link rel="stylesheet" href="styles.css" />
         <link rel="stylesheet" href="stylesdarkmode.css" />
+        <link rel="stylesheet" href="options.css" />
     </head>
     <body>
         <div class="container">
-            <h1 class="title">Link Manager</h1>
+            <h1 class="title">Link Manager - Import & Visualize</h1>
 
-            <h3>Export:</h3>
-            <div class="section">
-                <button
-                    id="exportTabsTxt"
-                    class="button export button-component"
-                >
-                    TXT
-                </button>
-
-                <button
-                    id="exportTabsCsv"
-                    class="button export button-component disabled"
-                >
-                    CSV
-                </button>
-
-                <button
-                    id="exportTabsJson"
-                    class="button export button-component"
-                >
-                    JSON
-                </button>
-            </div>
-
-            <div class="separator"></div>
-
-            <h3>Import:</h3>
+            <h3>Import Links:</h3>
             <div class="section">
                 <label
                     for="fileInput"
-                    class="custom-file-upload button-component"
+                    class="custom-file-upload button-component action-button"
                 >
                     <input
                         type="file"
                         id="fileInput"
                         accept=".txt, .json"
                         class="file-input"
-                    /><!--accept=".txt, .csv, .json"-->
+                    />
                     Upload File
                 </label>
-
                 <button
                     id="openLinks"
-                    class="button import button-component disabled"
+                    class="button import button-component"
+                    disabled
                 >
                     Open Links
                 </button>
+                <br />
+                <span class="file-name" id="fileName">No file selected</span>
             </div>
-            <span class="file-name" id="fileName"></span>
+
+            <div class="separator"></div>
+
+            <h3>Visualization:</h3>
+            <div id="visualizationContainer">
+                <p class="info-message" id="visualizationMessage">
+                    Upload a file to see the links visualized here.
+                </p>
+            </div>
 
             <div class="separator"></div>
 
@@ -71,6 +56,6 @@
             </div>
         </div>
 
-        <script src="popup3.js"></script>
+        <script src="options.js"></script>
     </body>
 </html>

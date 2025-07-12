@@ -1,0 +1,108 @@
+/* Basic styles for visualization - you'll expand on this */
+#visualizationContainer {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid var(--border-color); /* Use CSS variables if defined in styles.css */
+    border-radius: 8px;
+    background-color: var(--background-light);
+    max-height: 60vh; /* Limit height for scrollability */
+    overflow-y: auto;
+}
+.tab-group {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-left: 5px solid var(--accent-color);
+    background-color: var(--background-secondary);
+    border-radius: 4px;
+}
+.tab-group h4 {
+    margin-top: 0;
+    color: var(--text-color-strong);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer; /* Indicate it's clickable for collapsing */
+    user-select: none; /* Prevent text selection on double-click */
+}
+.tab-group h4 span.tab-count {
+    font-size: 0.8em;
+    color: var(--text-color-light);
+    margin-left: 10px;
+}
+.tab-group h4 .toggle-icon {
+    font-size: 1.2em;
+    margin-right: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+.tab-group.collapsed .toggle-icon {
+    transform: rotate(-90deg); /* Rotate for collapsed state */
+}
+.tab-group .group-header-actions {
+    display: flex;
+    align-items: center;
+}
+.tab-group .group-header-actions button {
+    margin-left: 10px;
+    font-size: 0.8em;
+    padding: 4px 8px;
+}
+.tab-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    padding-left: 10px; /* Indent tabs under group header */
+    justify-content: space-between; /* Space out link and remove button */
+}
+/* Removed .tab-item img as per request */
+.tab-item a {
+    color: var(--link-color);
+    text-decoration: none;
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-right: 10px; /* Space before remove button */
+    text-align: left;
+}
+.tab-item a:hover {
+    text-decoration: underline;
+}
+.tab-item .remove-button {
+    background-color: #dc3545; /* Red color for remove */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 3px 7px;
+    cursor: pointer;
+    font-size: 0.75em;
+    transition: background-color 0.2s ease;
+}
+.tab-item .remove-button:hover {
+    background-color: #c82333;
+}
+.ungrouped-tabs h4 {
+    color: var(--text-color-strong);
+}
+.action-buttons {
+    margin-top: 10px;
+    text-align: right;
+}
+.action-buttons button {
+    margin-left: 10px;
+}
+.info-message {
+    text-align: center;
+    color: var(--text-color-light);
+    margin-top: 30px;
+}
+.tab-list {
+    margin-top: 10px;
+    /* For collapsing */
+    max-height: 1000px; /* Arbitrarily large initial height */
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+.tab-group.collapsed .tab-list {
+    max-height: 0;
+}

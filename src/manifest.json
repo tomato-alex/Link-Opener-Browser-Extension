@@ -1,11 +1,15 @@
 {
   "name": "Lobster",
-  "version": "1.5",
+  "version": "1.6",
   "description": "Import Tabs from File or Export to File",
   "icons": {
     "16": "icons/lobster_icon16.png",
     "48": "icons/lobster_icon16.png",
     "128": "icons/lobster_icon128.png"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
   },
   "manifest_version": 3,
   "permissions": [
