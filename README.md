@@ -2,7 +2,7 @@
 
 ## Link Opener - A Simple Tab Session Saver and Restorer
 
-or simply **_Lobster_** (**L**obster **O**pener **B**rowser **S**ave **T**ab **E**xtension **R**evisited)
+or simply **_Lobster_** (**L**ink **O**pener **B**rowser **S**ave **T**ab **E**xtension **R**evisited)
 
 ![Screenshot 1](https://github.com/user-attachments/assets/b375a818-368e-498f-ba99-0c8727dc6fb3) | ![Screenshot 2](https://github.com/user-attachments/assets/b591500b-4569-4615-91e7-760a16d63497)
 
@@ -55,7 +55,7 @@ cd lobster/src
 
 ```bash
 node build.js # For Chrome (default)
-node build.js firefox # For Firefox
+node build.js -o firefox # For Firefox
 ```
 
 > ℹ️ No NPM install or `package.json` needed. This is a simple build script that swaps the manifest file based on the target browser.
@@ -84,7 +84,6 @@ node build.js firefox # For Firefox
 ## 🛠️ Known Issues and Shortcomings
 
 -   Firefox:
-    -   File picker causes popup to close – move logic to background script
     -   Incomplete support for Manifest V3 and `serviceWorker`
 -   Manifest differences between Chrome and Firefox require dynamic replacement (`build.js` handles this)
 
@@ -100,20 +99,20 @@ node build.js firefox # For Firefox
 -   [x] Export/import tab groups (`.json`)
 -   [x] Simplify build script
 -   [x] Clean up UI
+-   [x] Fix Firefox extension closing when file selection open
 -   [ ] Drag & Drop support
 -   [ ] Keyboard shortcuts
--   [ ] Fix Firefox extension closing when file selection open
--   [ ] ~~Distinguish between `chrome` and `browser` APIs in code (optional, as FF handles this)~~
--   [ ] Rename `build.js` (`lobster.js`?)
 
--   [ ] v1.6 Tab Overview similar to Chrome or Firefox to allow selection of tabs or groups for partial export
+-   [ ] v1.7 Tab Overview similar to Chrome or Firefox to allow selection of tabs or groups for partial export
 -   [ ] v2 Tab Manager for managing tabs (move tabs, etc)
 
 ### 📦 Packaging
 
--   [ ] Create `.crx` file for easier Chrome installation
--   [ ] Create `.zip` for simpler Firefox install
+-   [x] Create `.crx` file for easier Chrome installation
+-   [x] Create `.zip` for simpler Firefox install
 -   [ ] Automate installation files (Chrome and Firefox packaging)
+
+> ℹ️ The Extension is currently undergoing a review in both Chrome Extension store and Firefox Add-on store.
 
 ---
 
